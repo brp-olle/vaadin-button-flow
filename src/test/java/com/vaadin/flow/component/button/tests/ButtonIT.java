@@ -119,6 +119,8 @@ public class ButtonIT extends ComponentDemoTest {
         // the button unclickable by selenium.
         Assert.assertEquals("none", button.getCssValue("pointer-events"));
 
+        button.click();
+
         WebElement message = layout.findElement(By.id("buttonMessage"));
         Assert.assertEquals("", message.getText());
     }
